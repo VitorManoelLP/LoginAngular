@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Gwythyr</a>
+    <button class="btn btn-dark" type="submit" routerLink="/login">Login</button>
+    <button class="btn btn-dark" type="submit">About</button>
+  </div>
+</nav>
+<form class="container">
+  <br><br>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nome</label>
+    <input [(ngModel)]="R_usuario.nome" type="name" name="nome" class="form-control" id="exampleInputNome1" aria-describedby="nomeHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input [(ngModel)]="R_usuario.email" type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input [(ngModel)]="R_usuario.senha" name="password" type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+      <input [(ngModel)]="R_usuario.confirmSenha" name="Cpassword" type="password" class="form-control" id="exampleInputPassword2">
+    </div>
+  <button type="submit" class="btn btn-outline-dark" (click)="registrar()">Register</button>
+</form>
