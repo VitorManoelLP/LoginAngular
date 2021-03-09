@@ -1,29 +1,32 @@
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">Gwythyr</a>
-    <button class="btn btn-dark" type="submit" routerLink="/login">Login</button>
-    <button class="btn btn-dark" type="submit">About</button>
+    <a class="navbar-brand" id="gwythyr">GWYTHYR</a>
   </div>
 </nav>
 <form class="container">
-  <br><br>
+  <h3 class="display-4" id="title">REGISTER</h3>
+  <br>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nome</label>
-    <input [(ngModel)]="R_usuario.nome" type="name" name="nome" class="form-control" id="exampleInputNome1" aria-describedby="nomeHelp">
-    <div id="emailHelp" class="form-text"></div>
+    <input [(ngModel)]="R_usuario.nome" type="name" name="nome" class="form-control" id="exampleInputNome1" aria-describedby="nomeHelp" placeholder="Nome">
+    <span *ngIf="insertRegister.get('nome')?.invalid" id="required">*required</span>
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input [(ngModel)]="R_usuario.email" type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text"></div>
+    <input [(ngModel)]="R_usuario.email" type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+    <span *ngIf="insertRegister.get('email')?.invalid" id="required">*required</span>
   </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input [(ngModel)]="R_usuario.senha" name="password" type="password" class="form-control" id="exampleInputPassword1">
+      <input [(ngModel)]="R_usuario.senha" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <span *ngIf="insertRegister.get('senha')?.invalid" id="required">*required</span>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-      <input [(ngModel)]="R_usuario.confirmSenha" name="Cpassword" type="password" class="form-control" id="exampleInputPassword2">
+      <input [(ngModel)]="R_usuario.confirmSenha" name="Cpassword" type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+      <span *ngIf="insertRegister.get('confirmSenha')?.invalid" id="required">*required</span>
     </div>
-  <button type="submit" class="btn btn-outline-dark" (click)="registrar()">Register</button>
+    <div id="loginDiv">
+      <button type="submit" id="register" (click)="registrar()">Register</button>
+      <button type="submit" routerLink="/login" id="login"><span>Login</span></button>
+    </div>
 </form>
+<footer id="footer">
+  <p> Thanks for you access </p>
+</footer>
