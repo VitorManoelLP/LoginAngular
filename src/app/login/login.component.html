@@ -1,12 +1,12 @@
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">Gwythyr</a>
-    <button class="btn btn-dark" type="submit" routerLink="/register">Register</button>
-    <button class="btn btn-dark" type="submit">About</button>
+    <a class="navbar-brand" href="" id="gwythyr">GWYTHYR</a>
+    <button class="btn btn-dark" type="submit" routerLink="/register" id="register">Register</button>
+    <button class="btn btn-dark" type="submit" id="about">About</button>
   </div>
 </nav>
 <form class="container">
-  <br><br>
+  <h3 class="display-4" id="title">LOGIN</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input [(ngModel)]="usuario.email" type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -22,3 +22,6 @@
   </div>
   <button type="submit" class="btn btn-outline-dark" (click)="fazerLogin()">Login</button>
 </form>
+<footer id="footer">
+  <p> Thanks for you access </p>
+</footer>

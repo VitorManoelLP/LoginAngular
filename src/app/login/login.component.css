@@ -1,0 +1,32 @@
+#title {
+  text-align: center;
+}
+
+#register {
+  font-style: italic;
+}
+
+#about {
+  font-style: italic;
+}
+
+#gwythyr {
+  font-weight: bolder;
+}
+
+form {
+  width: 50%;
+  position: relative;
+  margin-top: 5%;
+}
+
+#footer{
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(52, 58, 64);
+  color: white;
+  font-weight: bolder;
+}
