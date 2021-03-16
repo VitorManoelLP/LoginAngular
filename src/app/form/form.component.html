@@ -1,10 +1,21 @@
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="">Gwythyr</a>
-    <button class="btn btn-dark" type="submit" routerLink="/login">Get out</button>
-  </div>
+<nav>
+  <h1 class="display-4">BEM VINDO</h1>
 </nav>
-<div>
-  <h1>form</h1>
-  <p>{{ usuario.nome }}A</p>
+
+<h1 class="display-4">Diário do(a) {{ usuario.nome }}!</h1>
+
+<div class="container">
+
+  <div >
+    <textarea  id="diario" name="diario" id="" cols="180" rows="22" style="resize: none;" maxlength="5000" minlength="500" [(ngModel)]="DiarioUsuario.texto"></textarea>
+  </div>
+
+  <div>
+    <button id="save"> Salvar </button>
+  </div>
+
+  <div id="clear">
+    <button id="clearB"> Limpar </button>
+  </div>
+
 </div>

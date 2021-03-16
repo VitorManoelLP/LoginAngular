@@ -1,88 +1,78 @@
-#title {
-  text-align: center;
-  color: white;
-}
-
-#login {
-  font-style: italic;
-}
-
-#about {
-  font-style: italic;
-}
-
-#gwythyr {
-  font-weight: bolder;
-}
-
-form {
-  width: 50%;
-  position: relative;
-  margin-top: 5%;
-}
-
-#footer{
-  text-align: center;
-  position: fixed;
+.main {
   width: 100%;
-  left: 0;
-  bottom: 0;
-  background-color: rgb(52, 58, 64);
-  color: white;
-  font-family: "Trirong", serif;
+  margin: 0 auto;
 }
 
-#register {
-  font-style: italic;
-  margin-right: 1%;
+.container- {
+  width: 100%;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2;
 }
 
-#loginDiv {
+.wrap {
+  width: 390px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  -o-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  -ms-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+
+.registerForm {
+  width: 100%;
+}
+
+.registerPrincipal {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 30px;
+  color: #333;
+  line-height: 1.2;
   text-align: center;
 }
 
-button:hover {
-  background-color: rgb(52, 58, 64);;
-  color: white;
-  border: 2px solid rgb(52, 58, 64);
-}
-
-button:hover span {
-  padding-right: 30px;
-}
-
-button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#required{
-    color: red;
-    font-size: 14px;
-    font-weight: bolder;
-}
-
-button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+.imagemUser img {
+  margin-top: 20px;
+  margin-left: 33%;
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
 }
 
 button {
-  transition-duration: 0.4s;
-  padding: 10px 24px;
-  border-radius: 5%;
-  font-family: "Trirong", serif;
-  background-color: white;
+  margin-top: 50px;
+  padding: 7px 38% 7px;
 }
 
+.inputEmail {
+  margin-top: 10px;
+}
+
+.inputPassword {
+  margin-top: 10px;
+}
+
+.sign {
+  margin-top: 30px;
+}
+
+#check{
+  margin-top: 10px;
+}
+
+.inputPasswordConfirm {
+  margin-top: 10px;
+}

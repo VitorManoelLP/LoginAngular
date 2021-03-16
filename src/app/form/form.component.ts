@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 import { AuthService } from '../login/auth.service';
-import { Usuario } from '../login/usuario';
+
+import { DiarioUsuario, Usuario } from '../login/usuario';
 
 @Component({
   selector: 'app-form',
@@ -9,11 +12,19 @@ import { Usuario } from '../login/usuario';
 })
 export class FormComponent implements OnInit {
 
-  public usuario: Usuario
+  texto: FormGroup;
 
-  constructor(private authService: AuthService) { }
+  public usuario: Usuario = new Usuario();
+
+  public DiarioUsuario: DiarioUsuario = new DiarioUsuario();
+
+  constructor(private authService: AuthService, private FormBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.texto = this.FormBuilder.group({
+      diario: []
+    });
   }
+
 
 }

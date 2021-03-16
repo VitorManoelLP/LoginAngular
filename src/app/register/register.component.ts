@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
 
   insertRegister: FormGroup;
 
+  // tslint:disable-next-line: variable-name
   public R_usuario: R_Usuario = new R_Usuario();
 
   constructor(private registerService: RegisterService, private formBuilder: FormBuilder) { }
@@ -24,7 +25,7 @@ export class RegisterComponent implements OnInit {
       email: [null, Validators.required],
       senha: [null, Validators.required],
       confirmSenha: [null, Validators.required],
-    })
+    });
 
   }
 

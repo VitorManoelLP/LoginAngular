@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { R_Usuario, Usuario} from '../login/usuario';
+import { R_Usuario, Usuario } from '../login/usuario';
 
 @Injectable({
   providedIn: 'root'

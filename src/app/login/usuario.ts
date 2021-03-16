@@ -1,7 +1,7 @@
 
 export class Usuario {
 
-  nome: 'teste';
+  nome: string = 'teste';
   email: string;
   senha: string;
 }
@@ -10,6 +10,10 @@ export class R_Usuario {
 
   nome: string;
   email: string;
-  senha: string
+  senha: string;
   confirmSenha: string;
+}
+
+export class DiarioUsuario {
+  texto: [];
 }

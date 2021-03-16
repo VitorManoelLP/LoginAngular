@@ -1,32 +1,43 @@
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="" id="gwythyr">GWYTHYR</a>
-  </div>
-</nav>
-<form class="container">
-  <h3 class="display-4" id="title">LOGIN</h3>
-  <br>
-  <div class="mb-3">
-    <input [(ngModel)]="usuario.email" type="email" name="email" for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
-    <span *ngIf="insertsLogin.get('email')?.invalid" id="required">*required</span>
-  </div>
+<div class="main">
+  <div class="container-">
+    <div class="wrap">
+      <form class="loginForm">
 
-    <div class="mb-3">
-      <input [(ngModel)]="usuario.senha" for="senha" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      <span *ngIf="insertsLogin.get('senha')?.invalid" id="required">*required</span>
+        <div>
+          <span class="loginPrincipal">Login</span>
+        </div>
+
+        <div class="imagemUser">
+          <img src="../../assets/person-male.png" alt="Person">
+        </div>
+
+        <div class="inputEmail">
+          <input [(ngModel)]="usuario.email" type="email" name="email" class="form-control" placeholder="Email">
+          <span *ngIf="this.exibirValidacao">*required / Email incorreto</span>
+        </div>
+
+        <div class="inputPassword">
+          <input  [(ngModel)]="usuario.senha" type="password" name="password" class="form-control" placeholder="password">
+          <span *ngIf="this.exibirValidacao">*required</span>
+        </div>
+
+        <div class="form-check" id="check">
+          <input type="checkbox" class="form-check-input">
+          <label class="form-check-label">Remember me</label>
+        </div>
+
+        <div>
+          <button type="submit" (click)="fazerLogin()" [disabled]="insertsLogin.invalid" class="btn btn-outline-dark">LOGIN</button>
+        </div>
+
+        <div class="sign">
+          <p>Dont't have on account?
+            <a routerLink="/register">Sign Up</a>
+          </p>
+        </div>
+
+      </form>
     </div>
-
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1" style="font-weight: bolder;">Remember me</label>
   </div>
-
-  <div id="loginDiv">
-    <button type="submit" id="loginE" (click)="fazerLogin()">Login</button>
-    <button type="submit" routerLink="/register" id="register"><span>Register</span></button>
-  </div>
-</form>
-<footer id="footer">
-  <p> Thanks for you access </p>
-</footer>
+</div>
 

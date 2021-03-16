@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { DiariosComponent } from './diarios/diarios.component';
 import { FormComponent } from './form/form.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     LoginComponent,
     FormComponent,
-    RegisterComponent
+    RegisterComponent,
+    DiariosComponent
   ],
   imports: [
     BrowserModule,
